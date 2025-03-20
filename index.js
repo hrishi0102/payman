@@ -39,13 +39,13 @@ console.log(`Payee created: ${payee.id}`);
 console.log(`Crypto Payee created: ${cryptoPayee.id}`);
 
 //Send a payment (can only use Test Account)
-// const payment = await payman.payments.sendPayment({
-//     amountDecimal: 5.00,
-//     payeeId: 'pd-1f0056c2-e3bc-6593-82c2-2f0e5fd60eb7',
-//     memo: 'Invoice #1234',
-//     metadata: {
-//       department: "marketing"
-//     }
-//   });
+const payment = await payman.payments.sendPayment({
+    amountDecimal: 5.00,
+    payeeId: 'pd-1f0056c2-e3bc-6593-82c2-2f0e5fd60eb7',
+    memo: 'Invoice #1234',
+    metadata: {
+      department: "marketing"
+    }
+  });
 
-// console.log('Payment sent:', JSON.stringify(payment));
+console.log('Payment sent:', JSON.stringify(payment));
