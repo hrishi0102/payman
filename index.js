@@ -37,14 +37,7 @@ const cryptoPayee = await payman.payments.createPayee({
 const test_payee = await payman.payments.createPayee({
 	type: "TEST_RAILS",
 	name: "Hrishikesh",
-	accountHolderName: "Hrishikesh",
-	accountHolderType: "individual",
-	accountNumber: "12345678",
-	routingNumber: "021000021",
-	accountType: "checking",
-	contactDetails: {
-		email: "hrishikesh@example.com",
-	},
+	tags: ["test", "hrishikesh"]
 });
 
 console.log(`Test Payee created: ${test_payee.id}`);
